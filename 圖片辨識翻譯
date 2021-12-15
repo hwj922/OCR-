@@ -1,0 +1,10 @@
+import  pytesseract
+from PIL import Image
+from translate import Translator
+
+im=Image.open(r'C:\Users\user\OneDrive\桌面\sentence.jpg')
+print(pytesseract.image_to_string(im,lang='eng'))
+
+translator = Translator ( to_lang = "zh" )
+translation = translator.translate('Do not go gentle into that good night!')
+print(translation)
